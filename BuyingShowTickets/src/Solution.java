@@ -23,37 +23,19 @@ public class Solution {
 	
 	public static void main(String[] args) throws IOException {
 		Scanner sc = new Scanner(System.in);
-		boolean bError = true;
+		System.out.println("Please enter number of people in the queue.");
+		int totalqueue=sc.nextInt();
 		
-		do {
-			try {
-				System.out.println("Please enter number of people in the queue.");
-				int totalqueue=sc.nextInt();
-				
-				int[] tickets = new int[totalqueue];
-				
-				for(int i=0; i<totalqueue; i++) {
-					tickets[i] = sc.nextInt();
-				}
-				
-				int jessepos = sc.nextInt();
-				sc.close();
-				
-				System.out.println("Waiting Time:"+waitingTime(tickets,jessepos));
-				bError=false;
-
-			}
-			catch(InputMismatchException inputMismatchException)
-		    {
-		        System.out.printf("Error! You must enter integers");
-		        bError = false;
-
-		    }
+		int[] tickets = new int[totalqueue];
 		
+		for(int i=0; i<totalqueue; i++) {
+			tickets[i] = sc.nextInt();
 		}
-		while(bError);
-	
 		
+		int jessepos = sc.nextInt();
+		sc.close();
+		
+		System.out.println("Waiting Time:"+waitingTime(tickets,jessepos));
 	}
 
 }

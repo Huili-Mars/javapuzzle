@@ -39,40 +39,25 @@ public class Solution {
 	public static void main(String[] args) throws IOException{
 		sc = new Scanner(System.in);
 		
-		boolean bError = true;
-		
-		do {
-			try {
-				System.out.println("Please enter number of elements in Andrea.");
-				int andrea = sc.nextInt();
-				int[] andreaDices = new int[andrea];
-				for(int i=0; i<andrea; i++) {
-					andreaDices[i] = sc.nextInt();
-				}
-				
-				System.out.println("Please enter number of elements in Maria.");
-				int maria = sc.nextInt();
-				int[] mariaDices = new int[maria];
-				for(int i=0; i<maria; i++) {
-					mariaDices[i] = sc.nextInt();
-				}
-				
-				System.out.println("Please indicate the game is even or odd.");
-				String gamemode = sc.next();
-				
-				sc.close();
-				System.out.println("The winner is " + winner(andreaDices,mariaDices,gamemode));
-				bError = false;
-			}
-			catch(InputMismatchException inputMismatchException)
-		    {
-		        System.out.printf("Error! You must enter integers");
-		        bError = false;
-
-		    }
-		
+		//System.out.println("Please enter number of elements in Andrea.");
+		int andrea = sc.nextInt();
+		int[] andreaDices = new int[andrea];
+		for(int i=0; i<andrea; i++) {
+			andreaDices[i] = sc.nextInt();
 		}
-		while(bError);
+		
+		//System.out.println("Please enter number of elements in Maria.");
+		int maria = sc.nextInt();
+		int[] mariaDices = new int[maria];
+		for(int i=0; i<maria; i++) {
+			mariaDices[i] = sc.nextInt();
+		}
+		
+		//System.out.println("Please indicate the game is even or odd.");
+		String gamemode = sc.next();
+		
+		sc.close();
+		System.out.println("The winner is " + winner(andreaDices,mariaDices,gamemode));
 	}
 
 }

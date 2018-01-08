@@ -6,21 +6,20 @@ public class Solution {
 	static int minNum(int A, int K, int P) {
 		
 		int minDay = 1;
-		int sumA = A+P;
-		int sumK = K;
+		int constantA = A;
+		int constantK = K;
+
+		if(A>=K) {
+			return -1;
+		}
 		
-		if(sumA == sumK) {
-			minDay +=1;
+		while((A+P)>=K) {
+			
+			A = A+constantA;
+			K = K+constantK;
+			minDay++;
 		}
-		else if(sumA > sumK) {
-			minDay += (int)Math.ceil((double)P/(K-A));
-		}
-		else if(sumA < sumK) {
-			minDay = 1;
-		}
-		else {
-			minDay = -1;
-		}
+
 
 		return minDay;
 	}
@@ -28,13 +27,23 @@ public class Solution {
 		
 		Scanner sc = new Scanner(System.in);
 		
+		System.out.println("Please enter number of problems Asha solves per day:");
 		int A = sc.nextInt();
+		System.out.println("Please enter number of problems Kelly solves per day:");
 		int K = sc.nextInt();		
+		System.out.println("Please enter number of problems Asha solves ahead of Kelly:");
 		int P = sc.nextInt();
 		
 		sc.close();
 		
-		System.out.println(minNum(A,K,P));
+		int days = minNum(A,K,P);
+		
+		if(days == -1) {
+			System.out.println("It is impossible for Kelly to surpass Asha");
+		}
+		else {
+			System.out.println("Mininum days required:"+days);
+		}
 	}
 
 }

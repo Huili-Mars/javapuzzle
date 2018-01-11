@@ -54,14 +54,12 @@ public class Solution {
 		Scanner sc = new Scanner(System.in);
 		Scanner sc2 = new Scanner(System.in);
 
-		System.out.println("Please enter number of test cases:");
 		int testcase = sc.nextInt();
 		
 		String[] info = new String[testcase];
 		
 		for(int i=0; i<testcase; i++) {
 			
-			System.out.println("Please enter circles information for "+i+":");
 			info[i] = sc2.nextLine();
 			
 		}

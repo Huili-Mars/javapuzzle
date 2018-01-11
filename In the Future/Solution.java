@@ -27,23 +27,15 @@ public class Solution {
 		
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Please enter number of problems Asha solves per day:");
 		int A = sc.nextInt();
-		System.out.println("Please enter number of problems Kelly solves per day:");
 		int K = sc.nextInt();		
-		System.out.println("Please enter number of problems Asha solves ahead of Kelly:");
 		int P = sc.nextInt();
 		
 		sc.close();
 		
 		int days = minNum(A,K,P);
 		
-		if(days == -1) {
-			System.out.println("It is impossible for Kelly to surpass Asha");
-		}
-		else {
-			System.out.println("Mininum days required:"+days);
-		}
+		System.out.println(days);
 	}
 
 }

@@ -23,7 +23,6 @@ public class Solution {
 
 		Scanner sc = new Scanner(System.in);
 		
-		System.out.println("Please enter number of elements:");
 		int elem = sc.nextInt();
 		int[] k = new int[elem];
 		
@@ -32,7 +31,10 @@ public class Solution {
 		}
 		
 		sc.close();
-		System.out.println(Arrays.toString(maxSubsetSum(k)));
+		
+		Long[] results = maxSubsetSum(k);
+		
+		System.out.println(Arrays.toString(results));
 		
 	}
 

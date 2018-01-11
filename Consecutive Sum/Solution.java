@@ -27,9 +27,9 @@ public class Solution{
 	
 	public static void main(String args[])throws IOException {
 	   sc = new Scanner(System.in);
-	   System.out.println("Enter a number : "); //inputting the number
-	   int n= sc.nextInt();
+	   long n= sc.nextLong();
 	   
-	   System.out.println(consecutive(n));
+	   int noOfWays = consecutive(n);
+	   System.out.println(noOfWays);
 	}
 }
